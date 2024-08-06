@@ -10,7 +10,7 @@ strong{
     height: 19vh;
     border-bottom: 1px solid whitesmoke;
 }
-.hContainer .nav-anchors{
+.hContainer .navAnchors{
     width: 90%;
     display: flex;
     justify-content:flex-end;
