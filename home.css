@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+strong{
+    font-weight: normal;
+}
+.hContainer{
+    height: 19vh;
+    border-bottom: 1px solid whitesmoke;
+}
+.hContainer .nav-buttons{
+    width: 90%;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    gap: 10px;
+    margin: 2%;
+}
+.profileImage{
+    display: flex;
+    position: absolute;
+    left: 10%;
+    top: 10vh;
+    width: 150px;
+    padding: 1px;
+    border-radius: 4px;
+    box-shadow: 1px 2px 2px 2px rgb(103, 103, 103);
+}
+.profileImage img{
+    width: 100%;
+    object-fit: fill;
+    border-radius: 4px;
+}
+main{
+    display: flex;
+}
+.animation{
+    width: 30%;
+    z-index: 1;
+}
+@keyframes paperanime {
+    
+    0%{
+        top: 45%;
+        left: 1%;
+        rotate: -10deg;
+    }
+    5%{
+        rotate: -10deg;
+        top: 30%;
+        left: 7%;
+    }
+    10%{
+        rotate: -10deg;
+        top: 20%;
+        left: 13%;
+    }
+    15%{
+        rotate: -5deg;
+        top: 15%;
+        left: 21%;
+    }
+    20%{
+        rotate: -5deg;
+        top: 10%;
+        left: 29%;
+    }
+    25%{
+        rotate: -5deg;
+        top: 5%;
+        left: 37%;
+    }
+    30%{
+        rotate: 5deg;
+        top: 3%;
+        left: 45%;
+    }
+    35%{
+        rotate: 5deg;
+        top: 3%;
+        left: 53%;
+    }
+    40%{
+        rotate: 5deg;
+        top: 3%;
+        left: 61%;
+    }
+    45%{
+        rotate: 10deg;
+        top: 6%;
+        left: 67%;
+    }
+    50%{
+        rotate: 15deg;
+        top: 20%;
+        left: 71%;
+    }
+    55%{
+        rotate: 95deg;
+        top: 25%;
+        left: 62%;
+    }
+    55%{
+        rotate: 165deg;
+        top: 30%;
+        left: 58%;
+    }
+    60%{
+        rotate: 165deg;
+        top: 35%;
+        left: 54%;
+    }
+    65%{
+        rotate: 165deg;
+        top: 38%;
+        left: 50%;
+    }
+    70%{
+        rotate: 165deg;
+        top: 43%;
+        left: 46%;
+    }
+    75%{
+        rotate: 165deg;
+        top: 48%;
+        left: 42%;
+    }
+    80%{
+        rotate: 165deg;
+        top: 53%;
+        left: 38%;
+    }
+    85%{
+        rotate: 165deg;
+        top: 58%;
+        left: 34%;
+    }
+    90%{
+        rotate: 185deg;
+        top: 60%;
+        left: 26%;
+    }
+    95%{
+        rotate: 190deg;
+        top: 59%;
+        left: 20%;
+    }
+    100%{
+        rotate: 190deg;
+        top: 59%;
+        left: -5;
+        display: none;
+    }
+}
+#paper{
+    background-color: transparent;
+    display: flex;
+    scale: .6;
+    position: absolute;
+    animation-name: paperanime;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+.mContainer{
+    margin-left: 150px;
+    width: 60%;
+    padding: 4% 7% 7% 7%;
+    margin: 2%;
+    border-radius: 9px;
+    box-shadow: 2px 2px 2px 2px rgb(209, 209, 209);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+ #hi{
+    font-size: 32px;
+}
+.mContainer .heading{
+    margin-bottom: 10px;
+}
+.mContainer .heading h2{
+    display: inline;
+}
+.mContainer  h1{
+    font-size: 1.5em;
+}
+.mContainer p{
+    margin-bottom: 3%;
+}
+.btn{
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 2%;
+    border-radius: 6px;
+    box-shadow: 1px 2px 2px 2px black;
+    background-color: rgb(46, 46, 46);
+    color: rgb(255, 255, 255);
+}
+.btn:hover{
+    transform: scale(.97);
+}
