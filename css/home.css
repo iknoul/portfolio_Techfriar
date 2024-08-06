@@ -10,7 +10,7 @@ strong{
     height: 19vh;
     border-bottom: 1px solid whitesmoke;
 }
-.hContainer .nav-buttons{
+.hContainer .navAnchors{
     width: 90%;
     display: flex;
     justify-content:flex-end;
@@ -18,6 +18,20 @@ strong{
     gap: 10px;
     margin: 2%;
 }
+.nava{
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 2%;
+    border-radius: 7px;
+    box-shadow: 1px 2px 2px 2px rgb(230, 227, 227);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .profileImage{
     display: flex;
     position: absolute;
@@ -33,139 +47,161 @@ strong{
     object-fit: fill;
     border-radius: 4px;
 }
+
+@keyframes typing {
+    from { width: 0%; }
+    to { width: 33%; }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+@keyframes nodisplay {
+    from, to{display: none;}
+}
+.typing-text {
+    display: flex;
+    margin-left: 30%;
+    color: rgb(153, 35, 35);
+    width: 20%;
+    position: absolute;
+    font-size: 36px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid;
+    animation: typing 4s steps(30) 1s 1 normal both, blink-caret 0.75s step-end infinite, nodisplay 1s 6s forwards;
+}
 main{
     display: flex;
 }
-.animation{
+.leftContainer{
     width: 30%;
     z-index: 1;
 }
+.leftContainer .bottom{
+    width: 100%;
+    height: 180px;
+    margin: 40% 1% 20% 3%;
+    /* border-radius: 9px;
+    border: 2px solid rgba(5, 5, 5, 0.511); */
+}
 @keyframes paperanime {
-    
-    0%{
+    0% {
         top: 45%;
         left: 1%;
-        rotate: -10deg;
+        transform: rotate(-10deg);
     }
-    5%{
-        rotate: -10deg;
+    5% {
         top: 30%;
         left: 7%;
+        transform: rotate(-10deg);
     }
-    10%{
-        rotate: -10deg;
+    10% {
         top: 20%;
         left: 13%;
+        transform: rotate(-10deg);
     }
-    15%{
-        rotate: -5deg;
+    15% {
         top: 15%;
         left: 21%;
+        transform: rotate(-5deg);
     }
-    20%{
-        rotate: -5deg;
+    20% {
         top: 10%;
         left: 29%;
+        transform: rotate(-5deg);
     }
-    25%{
-        rotate: -5deg;
+    25% {
         top: 5%;
         left: 37%;
+        transform: rotate(-5deg);
     }
-    30%{
-        rotate: 5deg;
+    30% {
         top: 3%;
         left: 45%;
+        transform: rotate(5deg);
     }
-    35%{
-        rotate: 5deg;
+    35% {
         top: 3%;
         left: 53%;
+        transform: rotate(5deg);
     }
-    40%{
-        rotate: 5deg;
+    40% {
         top: 3%;
         left: 61%;
+        transform: rotate(5deg);
     }
-    45%{
-        rotate: 10deg;
+    45% {
         top: 6%;
         left: 67%;
+        transform: rotate(10deg);
     }
-    50%{
-        rotate: 15deg;
+    50% {
         top: 20%;
         left: 71%;
+        transform: rotate(15deg);
     }
-    55%{
-        rotate: 95deg;
+    55% {
         top: 25%;
         left: 62%;
+        transform: rotate(95deg);
     }
-    55%{
-        rotate: 165deg;
+    60% {
         top: 30%;
         left: 58%;
+        transform: rotate(165deg);
     }
-    60%{
-        rotate: 165deg;
+    65% {
         top: 35%;
         left: 54%;
+        transform: rotate(165deg);
     }
-    65%{
-        rotate: 165deg;
-        top: 38%;
-        left: 50%;
-    }
-    70%{
-        rotate: 165deg;
+    70% {
         top: 43%;
         left: 46%;
+        transform: rotate(165deg);
     }
-    75%{
-        rotate: 165deg;
+    75% {
         top: 48%;
         left: 42%;
+        transform: rotate(165deg);
     }
-    80%{
-        rotate: 165deg;
+    80% {
         top: 53%;
         left: 38%;
+        transform: rotate(165deg);
     }
-    85%{
-        rotate: 165deg;
+    85% {
         top: 58%;
         left: 34%;
+        transform: rotate(165deg);
     }
-    90%{
-        rotate: 185deg;
+    90% {
         top: 60%;
         left: 26%;
+        transform: rotate(185deg);
     }
-    95%{
-        rotate: 190deg;
+    95% {
         top: 59%;
         left: 20%;
+        transform: rotate(190deg);
     }
-    100%{
-        rotate: 190deg;
+    100% {
         top: 59%;
-        left: -5;
+        left: -5%;
+        transform: rotate(190deg);
         display: none;
     }
 }
-#paper{
+
+#paper {
     background-color: transparent;
     display: flex;
-    scale: .6;
+    scale: 0.6;
     position: absolute;
-    animation-name: paperanime;
-    animation-duration: 6s;
-    animation-iteration-count: 1;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
+    animation: paperanime 10s steps(30) 0s infinite forwards;
 }
-
 
 .mContainer{
     margin-left: 150px;
@@ -194,17 +230,18 @@ main{
 .mContainer p{
     margin-bottom: 3%;
 }
-.btn{
+#nav_about{
     background: none;
     border: none;
     outline: none;
     box-shadow: none;
+    text-decoration: none;
     padding: 2%;
     border-radius: 6px;
     box-shadow: 1px 2px 2px 2px black;
     background-color: rgb(46, 46, 46);
     color: rgb(255, 255, 255);
 }
-.btn:hover{
+.nava:hover, #nav_about:hover{
     transform: scale(.97);
 }
