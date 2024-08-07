@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    display: flex;
+    height: 12vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid whitesmoke;
+}
+header .back{
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    left: 2%;
+    padding: 1%;
+    border-radius: 9px;
+    box-shadow: 1px 2px 1px 1px whitesmoke;
+    /* border: 1px solid rgb(219, 218, 218); */
+}
+header .back:hover{
+    transform: scale(.95);
+}
+main{
+    margin: 2% 0 0 0;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.serviceCard{
+    width: 30%;
+    height: 30vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: 1px 2px 2px 2px whitesmoke;
+    display: flex;
+    flex-direction: column;    
+}
+
+.serviceCard .serviceTitle{
+    width: 100%;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    font-weight: bold;
+    font-size: large;
+    border-bottom: 2px solid rgb(227, 227, 227);
+    background-color: rgb(255, 255, 255)
+}
+.serviceCard .serviceList{
+    padding: 5%;
+}
+.serviceCard .serviceList li{
+    list-style-type: none;
+    cursor: pointer;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px  whitesmoke;
+}
+.serviceCard .serviceList li:hover{
+    transform: scale(1.05);
+}
