@@ -15,7 +15,12 @@ header{
 header .back{
     text-decoration: none;
     color: black;
+    display: flex;
     position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
     left: 2%;
     padding: 1%;
     border-radius: 9px;
@@ -35,25 +40,32 @@ main{
     flex-wrap: wrap;
 }
 .serviceCard{
+    text-decoration: none;
+    color: black;
     width: 30%;
-    height: 30vh;
+    height: auto;
     background-color: rgb(255, 255, 255);
     border-radius: 4px;
-    box-shadow: 1px 2px 2px 2px whitesmoke;
+    border: 1px solid rgb(201, 200, 200);
+    box-shadow: 1px 2px 2px 2px rgb(255, 191, 191);
     display: flex;
     flex-direction: column;    
+}
+.serviceCard:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+    background-color: white;
 }
 
 .serviceCard .serviceTitle{
     width: 100%;
     cursor: default;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1%;
+    text-align: center;
+    padding: 5px;
     font-weight: bold;
     font-size: large;
     border-bottom: 2px solid rgb(227, 227, 227);
+    color: rgb(100, 0, 0);
     background-color: rgb(255, 255, 255)
 }
 .serviceCard .serviceList{
@@ -69,4 +81,18 @@ main{
 }
 .serviceCard .serviceList li:hover{
     transform: scale(1.05);
+    background-color: rgb(220, 67, 67);
+    color: white;
 }
+@media screen and (max-width: 700px) {
+    .serviceCard{
+        width: 80%;
+        height: auto;
+    }
+}
+/* @media screen and (max-width: 300px) {
+    .serviceCard{
+        width: 80%;
+        
+    }
+} */

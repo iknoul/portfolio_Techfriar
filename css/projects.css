@@ -3,21 +3,38 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  -webkit-overflow-scrolling: touch; /* Add smooth scrolling on mobile devices */
+}
+body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
 header{
     width: 100%;
     display: flex;
     height: 12vh;
     position: fixed;
-    z-index: 10;
-    background-color: #fff;
+    top: 0;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid whitesmoke;
+    background-color: white;
+    z-index: 2; /* to always on top*/
 }
 header .back{
     text-decoration: none;
     color: black;
+    display: flex;
     position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
     left: 2%;
     padding: 1%;
     border-radius: 9px;
@@ -27,115 +44,90 @@ header .back{
 header .back:hover{
     transform: scale(.95);
 }
+
 main{
-    min-height: 80vh;
-    border-radius: 4px;
-    padding: 15vh 1% 1% 1%;
-    background-color: rgb(63, 63, 63);    
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 13vh auto ;
+  padding: 2rem 0;
+  gap: 15px;
+  box-shadow: 1px 2px 2px 2px whitesmoke;
 }
-main .project{
+
+.mySlides1, .mySlides2 {
+  display: none
+}
+img {
+  vertical-align: middle;
+  border-radius: 7px;
+}
+
+.projectCard{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+    padding-bottom: 10px;
+    border-radius: 7px;
+    box-shadow: 1px 2px 2px 2px rgb(96, 96, 96);
+}
+/* Slideshow container */
+.slideshowContainer {
+  max-width: 1000px;
+  position: relative;
+  padding: 1px;
+  margin: auto;
 }
 
-.project .card {
-    /* border: 1px solid whitesmoke; */
-    border-radius: 9px;
-    box-shadow: 1px 1px 1px 1px whitesmoke;
-    overflow: hidden;
-    width: 40%;
-    margin: 20px;
-    background-color: rgb(234, 234, 234);
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 7px;
+  margin: -22px 2px 0 2px;
+  margin-top: -22px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 7px 7px 0;
+  user-select: none;
 }
 
-.project .card .carousel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 200px; /* Adjust height as needed */
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 7px 0 0 7px;
 }
 
-.project .card .carousel .carouselImages {
-    display: flex;
-    transition: transform 0.5s ease;
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: rgba(157, 157, 157, 0.518);
+  color: black;
 }
 
-.project .card .carousel .image {
-    min-width: 100%;
-    box-sizing: border-box;
+.description{
+  /* margin: 5px; */
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
 }
-
-.project .card .carousel .carouselImages img {
-    width: 100%;
-    height: auto;
+.description a{
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 8px;
+  color: rgb(0, 39, 130);
+  box-shadow: 1px 2px 2px 2px rgb(96, 121, 181);
 }
-
-.project .card .carousel input[type="radio"] {
-    display: none;
+@media screen and (max-width: 1000px) {
+  .projectCard{
+    width: 65%;
 }
-
-#carousel1:checked ~ .carousel-images {
-    transform: translateX(0%);
-}
-
-#carousel2:checked ~ .carousel-images {
-    transform: translateX(-100%);
-}
-
-#carousel3:checked ~ .carousel-images {
-    transform: translateX(-200%);
-}
-
-.project .card .carousel .controls {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-}
-
-.project .card .carousel .controlDot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: #ddd;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-input#carousel1:checked ~ .controls label[for="carousel1"],
-input#carousel2:checked ~ .controls label[for="carousel2"],
-input#carousel3:checked ~ .controls label[for="carousel3"] {
-    background-color: #007BFF;
-}
-
-.project .card  .cardContent {
-    padding: 15px;
-    text-align: center;
-}
-
-.project .card .cardContent h3 {
-    margin: 0 0 10px;
-    font-size: 1.5em;
-}
-
-.project .card .cardContent p {
-    margin: 0 0 15px;
-    color: #000000;
-}
-
-.project .card .cardContent a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-.project .card .cardContent a:hover {
-    background-color: #0056b3;
 }

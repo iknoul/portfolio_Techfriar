@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1, h2{
+    text-align: center;
+}
+header{
+    width: 100%;
+    display: flex;
+    height: 12vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid whitesmoke;
+}
+header .back{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    left: 2%;
+    padding: 1%;
+    border-radius: 9px;
+    box-shadow: 1px 2px 1px 1px whitesmoke;
+    /* border: 1px solid rgb(219, 218, 218); */
+}
+header .back:hover{
+    transform: scale(.95);
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container .intro{
+    padding: 5px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.services {
+    margin: 20px 0;
+}
+
+.services h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.serviceItem {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+#nav_contact{
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+    padding: 2%;
+    border-radius: 6px;
+    box-shadow: 1px 2px 2px 2px black;
+    background-color: rgb(46, 46, 46);
+    color: rgb(255, 255, 255);
+}
+#nav_contact:hover{
+    transform: scale(.97);
+}
+@media screen and (max-width: 450px) {
+    h1{
+        font-size: 1.7em;
+        padding: 0 2% 0 2%;
+    }
+}
+@media screen and (max-width: 380px) {
+    header{
+        height: 14vh;
+    }
+    header .back{
+        top: 0;
+    }
+    h1{
+        margin-top: 28px;
+        font-size: 1.5em;
+        padding: 2% 10% ;
+    }
+    h2{
+        font-size: 1.3em;
+    }
+    h3{
+        font-size: 1.0em;
+    }
+    p{
+        font-size: 0.9em;
+        text-align: justify;
+    }
+}
+
