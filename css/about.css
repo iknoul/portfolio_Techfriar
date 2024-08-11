@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    -webkit-overflow-scrolling: touch; /* Add smooth scrolling on mobile devices */
+}
+body::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+header{
+    width: 100%;
+    display: flex;
+    height: 12vh;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid whitesmoke;
+    background-color: white;
+}
+header .back{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    left: 2%;
+    padding: 1%;
+    border-radius: 9px;
+    box-shadow: 1px 2px 1px 1px whitesmoke;
+    /* border: 1px solid rgb(219, 218, 218); */
+}
+header .back:hover{
+    transform: scale(.95);
+}
+
+main {
+    width: 90%;
+    margin: 12vh auto auto auto;
+    padding: 2rem 0;
+}
+
+h1,h2{
+    margin-bottom: 0;
+}
+
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.aboutMe p {
+    text-align: justify;
+}
+
+.profileImage {
+    float: left;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.summary p{
+    margin-top: 2%;
+}
+
+.myJourny, .skills, .experience {
+    margin-top: -10px;
+    padding: 10px;
+    box-shadow: 1px 2px 2px 2px whitesmoke;
+    border-radius: 10px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    background: #333;
+    color: #fff;
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
