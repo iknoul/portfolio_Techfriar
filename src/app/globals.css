@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-glass: var(--glass);
+  --color-glass-border: var(--glass-border);
+}
+
+:root {
+  /* Default: Dark-mode-first Theme System (Emerald Green Accent) */
+  --background: #030712; /* Neutral dark 950 */
+  --foreground: #f3f4f6; /* Gray 100 */
+  --card: #0b0f19; /* Custom dark card */
+  --card-foreground: #e5e7eb; /* Gray 200 */
+  --border: rgba(255, 255, 255, 0.08);
+  --accent: #10b981; /* Deep electric Emerald Green */
+  --accent-foreground: #042f1a;
+  --muted: #1f2937; /* Gray 800 */
+  --muted-foreground: #9ca3af; /* Gray 400 */
+  --glass: rgba(11, 15, 25, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.05);
+}
+
+html.light {
+  --background: #f9fafb; /* Gray 50 */
+  --foreground: #111827; /* Gray 900 */
+  --card: #ffffff;
+  --card-foreground: #1f2937; /* Gray 800 */
+  --border: rgba(0, 0, 0, 0.08);
+  --accent: #059669; /* Emerald Green (slightly darker for contrast) */
+  --accent-foreground: #ffffff;
+  --muted: #f3f4f6; /* Gray 100 */
+  --muted-foreground: #4b5563; /* Gray 600 */
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.05);
+}
+
+/* Base resets & styles */
+body {
+  background-color: var(--background);
+  background-image: radial-gradient(circle at top right, rgba(16, 185, 129, 0.14), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.08), transparent 20%);
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Subtle mesh gradient background */
+.mesh-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.mesh-circle-1 {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  filter: blur(80px);
+}
+
+.mesh-circle-2 {
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, transparent 70%);
+  filter: blur(80px);
+}
+
+/* Custom styles for drawing lines */
+.path-draw {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Smooth custom styles for animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-delay: 0s !important;
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+}
